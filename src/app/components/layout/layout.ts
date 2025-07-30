@@ -5,22 +5,14 @@ import { ToastrService } from 'ngx-toastr';
   selector: 'app-layout',
   standalone: false,
   templateUrl: './layout.html',
-  styleUrl: './layout.scss'
+  styleUrl: './layout.scss',
 })
 export class Layout implements OnInit {
+  constructor(private toastr: ToastrService) {}
 
-  constructor(
-    private toastr: ToastrService
-  ) {
-
-  }
-  
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   public pressMe(): void {
     this.toastr.success('Thanks! :)');
   }
-
 }
